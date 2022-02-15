@@ -20,7 +20,7 @@ const options = {
     watchOptions: {
         poll: 1000, // 每秒询问多少次
         aggregateTimeout: 500,  //防抖 多少毫秒后再次触发
-        ignored: /node_modules/ //忽略时时监听
+        ignored: /node_modules/ //忽略实时监听
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -29,9 +29,9 @@ const options = {
             template: 'index.html',
             chunks: ['commonJs_sync_index'],
             minify: {
-                removeComments: true,
-                collapseWhitespace: false,
-                removeAttributeQuotes: true
+                removeComments: true,   // 删除注释
+                collapseWhitespace: false,  // 取消去除空格
+                removeAttributeQuotes: true // 去除属性引号
             }  
         }),
         new HtmlWebpackPlugin({
