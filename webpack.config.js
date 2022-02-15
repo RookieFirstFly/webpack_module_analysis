@@ -1,6 +1,6 @@
 const pathLib = require("path");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-let options = {
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const options = {
     mode:"development",
     entry: {
         commonJs_sync_index: pathLib.resolve(__dirname, "./src/commonJs_sync_index.js"),
@@ -24,7 +24,7 @@ let options = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'webpack_module_analysis_commonJs_sync',
+            title: '分析 webpack 模块 : CommonJs Sync 模式',
             filename: 'commonJs_sync_index.html',
             template: 'index.html',
             chunks: ['commonJs_sync_index'],
@@ -35,7 +35,7 @@ let options = {
             }  
         }),
         new HtmlWebpackPlugin({
-            title: 'webpack_module_analysis_es_sync',
+            title: '分析 webpack 模块 : Es Sync 模式',
             filename: 'es_sync_index.html',
             template: 'index.html',
             chunks: ['es_sync_index'],
@@ -46,7 +46,7 @@ let options = {
             }  
         }),
         new HtmlWebpackPlugin({
-            title: 'webpack_module_analysis_async',
+            title: '分析 webpack 模块 : import() 模式',
             filename: 'async_index.html',
             template: 'index.html',
             chunks: ['async_index'],

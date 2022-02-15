@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --mode development",
-    "webpack-prod": "webpack --mode production"
+    "webpack-prod": "webpack --mode production --profile --json=compilation-stats.json"
   },
   "repository": {
     "type": "git",
